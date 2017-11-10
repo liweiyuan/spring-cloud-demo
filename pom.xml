@@ -51,5 +51,9 @@
 		<module>eureka-client</module>
 		<module>consul-client</module>
 		<module>eureka-ribbon-consumer</module>
+		<module>eureka-feign-consumer</module>
+		<module>eureka-consumer</module>
+		<module>config-server-git</module>
+		<module>config-client</module>
 	</modules>
 </project>
