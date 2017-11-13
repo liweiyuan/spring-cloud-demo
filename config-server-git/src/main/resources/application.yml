@@ -8,6 +8,9 @@ spring:
           uri: https://github.com/liweiyuan/spring_cloud/
           search-paths: spring-config/config-repo
           username: 535767595@qq.com
-          password: ****************
+          password: lwy19998273333
 server:
   port: 1201
+
+
+#备注：访问的url：http://localhost:1201/liweiyuan-dev/master
