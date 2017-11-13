@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.wade.cloud</groupId>
-	<artifactId>eureka-ribbon-consumer-hystrix</artifactId>
+	<artifactId>turbine-amqp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>eureka-ribbon-consumer-hystrix</name>
-	<description>Demo project for Spring Boot</description>
+	<name>turbine-amqp</name>
+	<description>Spring Cloud在封装Turbine的时候，还实现了基于消息代理的收集实现</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -27,8 +27,8 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-hystrix</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -42,21 +42,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-ribbon</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency>
-		<!--增加监控的模块-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-		<!--输出的信息在RabbitMQ中-->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-netflix-hystrix-amqp</artifactId>
+			<artifactId>spring-cloud-starter-turbine-amqp</artifactId>
 		</dependency>
 	</dependencies>
 
