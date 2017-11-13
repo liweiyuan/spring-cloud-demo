@@ -8,7 +8,7 @@ spring:
           uri: https://github.com/liweiyuan/spring_cloud/
           search-paths: spring-config/config-repo
           username: 535767595@qq.com
-          password: lwy19998273333
+          password: ************
 server:
   port: 1201
 
