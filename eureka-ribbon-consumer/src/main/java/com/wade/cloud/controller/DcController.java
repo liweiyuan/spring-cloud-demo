@@ -19,4 +19,5 @@ public class DcController {
         return restTemplate.getForObject("http://eureka-client/dc",String.class);
         //http://eureka-client/dc
     }
+
 }
