@@ -3,7 +3,7 @@ package com.wade.cloud.config;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.client.OkHttpClientHttpRequestFactory;
+import org.springframework.http.client.Netty4ClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
 /**
@@ -23,13 +23,25 @@ public class ServiceUnit {
         return restTemplate1;
     }*/
 
-    @Bean
+   /* @Bean
     @LoadBalanced
     public RestTemplate getOkHttpInstance(){
         RestTemplate restTemplate=new RestTemplate();
         OkHttpClientHttpRequestFactory factory=new OkHttpClientHttpRequestFactory();
         factory.setConnectTimeout(5000);
         factory.setWriteTimeout(10000);
+        restTemplate.setRequestFactory(factory);
+        return restTemplate;
+    }*/
+
+
+    @Bean
+    @LoadBalanced
+    public RestTemplate getNetty4Instance() {
+        RestTemplate restTemplate = new RestTemplate();
+        Netty4ClientHttpRequestFactory factory = new Netty4ClientHttpRequestFactory();
+        factory.setConnectTimeout(5000 * 2);
+        factory.setReadTimeout(5000 * 2);
         restTemplate.setRequestFactory(factory);
         return restTemplate;
     }
