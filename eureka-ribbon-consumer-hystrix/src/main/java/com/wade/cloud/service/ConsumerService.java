@@ -1,6 +1,5 @@
 package com.wade.cloud.service;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -18,7 +17,7 @@ public  class ConsumerService {
     RestTemplate restTemplate;
 
     //依赖资源定义服务降级逻辑
-    @HystrixCommand(fallbackMethod = "fallback")
+    //@HystrixCommand(fallbackMethod = "fallback")
     public String consumer(){
         return restTemplate.getForObject("http://eureka-client/dc", String.class);
     }

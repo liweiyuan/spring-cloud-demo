@@ -15,8 +15,14 @@ public class DcController {
     @Autowired
     DcClient dcClient;
 
+    //@HystrixCommand(fallbackMethod = "fallback")
     @GetMapping("/consumer")
     public String dc(){
         return dcClient.consumer();
+    }
+
+    public String fallback(){
+        System.err.println("hello,world");
+        return "fallback";
     }
 }
