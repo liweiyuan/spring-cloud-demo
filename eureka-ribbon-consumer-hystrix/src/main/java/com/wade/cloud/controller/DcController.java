@@ -26,4 +26,10 @@ public class DcController {
     public String fallback(){
         return "fallback";
     }
+
+    @HystrixCommand(fallbackMethod = "fallback")
+    @GetMapping("/consumer1")
+    public String dc1(){
+        return consumerService.consumer1();
+    }
 }

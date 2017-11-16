@@ -25,4 +25,8 @@ public  class ConsumerService {
     public String fallback(){
         return "fallback";
     }
+
+    public String consumer1(){
+        return restTemplate.getForObject("http://eureka-client1/dc", String.class);
+    }
 }

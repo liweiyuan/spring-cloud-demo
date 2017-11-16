@@ -18,7 +18,7 @@ public class DcController {
     @GetMapping("/dc")
     public String dc(){
         try {
-            Thread.sleep(5000L);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

@@ -26,4 +26,9 @@ public class DcController {
         System.err.println("hello,world");
         return "fallback";
     }
+
+    @GetMapping("/dc")
+    public String getSc(){
+        return dcClient.consumer();
+    }
 }
