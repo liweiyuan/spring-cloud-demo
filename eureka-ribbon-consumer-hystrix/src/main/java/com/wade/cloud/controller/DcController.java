@@ -1,6 +1,5 @@
 package com.wade.cloud.controller;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.wade.cloud.service.ConsumerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,13 +16,12 @@ public class DcController {
     ConsumerService consumerService;
 
 
-    @HystrixCommand(fallbackMethod = "fallback")
     @GetMapping("/consumer")
     public String dc(){
         return consumerService.consumer();
     }
 
-    public String fallback(){
+   /* public String fallback(){
         return "fallback";
     }
 
@@ -31,5 +29,5 @@ public class DcController {
     @GetMapping("/consumer1")
     public String dc1(){
         return consumerService.consumer1();
-    }
+    }*/
 }
