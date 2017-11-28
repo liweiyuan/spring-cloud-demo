@@ -38,6 +38,11 @@ public class DcController {
         return "fallback";
     }
 
+    public String fallback2(){
+        System.err.println("hello,world2");
+        return "fallback2";
+    }
+
     @GetMapping("/dc")
     public String getSc(){
         return dcClient.consumer();
